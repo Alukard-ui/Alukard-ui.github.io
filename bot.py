@@ -6,8 +6,8 @@ import re
 vk = vk_api.VkApi(token="919e919e3815b66463acace0ec808f8e88d010e3e2863477fb93d1542a70cdc48245ee3622e9318f7320c")
 longpoll = VkBotLongPoll(vk, '197891905')
 vk = vk.get_api()
-_eng_chars = u"~!@#$%^&qwertyuiop[]asdfghjkl;'zxcvbnm,./QWERTYUIOP{}ASDFGHJKL:\"|ZXCVBNM<>"
-_rus_chars = u"ё!\"№;%:?йцукенгшщзхъфывапролджэячсмитьбю.ЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭ/ЯЧСМИТЬБЮ"
+_eng_chars = u"~!@#$%^&qwertyuiop[]asdfghjkl;'zxcvbnm,./QWERTYUIOP{}ASDFGHJKL:\"|ZXCVBNM<>?"
+_rus_chars = u"ё!\"№;%:?йцукенгшщзхъфывапролджэячсмитьбю.ЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭ/ЯЧСМИТЬБЮ,"
 _trans_table = dict(zip(_eng_chars, _rus_chars))
 
 def fix_layout(s):
@@ -21,11 +21,12 @@ while True:
             peer_ida = event.object.message['peer_id']
             reply = event.object.message['date']
             linka = event.object.message['attachments']
-            razbit = request.replace(',','').replace('?',' ').replace('!',' ').replace('.',' ').split(' ')
+            razbit = request.replace(',','').split(' ')
             for i in razbit:
-                if re.search(r'[^a-zA-Z,]',i) == None:
-                    vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = fix_layout(request))
-                    break
+                if i != '' and i[:4] != 'http':
+                    if re.search(r'[a-z]',i) != None:
+                        vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = fix_layout(request))
+                        break
             if request == "физфак":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Чемпион")
             if request == "лучший в спбгу":
