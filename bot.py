@@ -44,15 +44,7 @@ while True:
             if request == "ave иванов":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Ave матану")
             for i in razbit:
-                if i == "ансис":
-                    vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Забудь нахуй")
-                if i == "ансису":
-                    vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Забудь нахуй")
-                if i == "ансисом":
-                    vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Забудь нахуй")
-                if i == "ансиса":
-                    vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Забудь нахуй")
-                if i == "ansys":
+                if i == "ансис" or i == "ансису" or i == "ансисом" or i == "ансиса" or i == "ansys":
                     vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Забудь нахуй")
             if request == "что делать с матаном?":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Иди ботай")
