@@ -1,11 +1,17 @@
 import vk_api
 from vk_api.bot_longpoll import VkBotLongPoll, VkBotEventType
 from vk_api.utils import get_random_id
+import re
 
 vk = vk_api.VkApi(token="919e919e3815b66463acace0ec808f8e88d010e3e2863477fb93d1542a70cdc48245ee3622e9318f7320c")
 longpoll = VkBotLongPoll(vk, '197891905')
 vk = vk.get_api()
+_eng_chars = u"~!@#$%^&qwertyuiop[]asdfghjkl;'zxcvbnm,./QWERTYUIOP{}ASDFGHJKL:\"|ZXCVBNM<>?"
+_rus_chars = u"ё!\"№;%:?йцукенгшщзхъфывапролджэячсмитьбю.ЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭ/ЯЧСМИТЬБЮ,"
+_trans_table = dict(zip(_eng_chars, _rus_chars))
 
+def fix_layout(s):
+    return u''.join([_trans_table.get(c, c) for c in s])
 print("Бот запущен")
 
 while True:
@@ -16,6 +22,8 @@ while True:
             reply = event.object.message['date']
             linka = event.object.message['attachments']
             razbit = request.replace(',','').replace('?',' ').replace('!',' ').replace('.',' ').split(' ')
+            if re.search(r'[^a-zA-Z]',request ):
+                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = fix_layout(request))
             if request == "физфак":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Чемпион")
             if request == "лучший в спбгу":
