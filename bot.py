@@ -22,8 +22,9 @@ while True:
             reply = event.object.message['date']
             linka = event.object.message['attachments']
             razbit = request.replace(',','').replace('?',' ').replace('!',' ').replace('.',' ').split(' ')
-            if re.search(r'[^a-zA-Z]',request) == None:
-                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = fix_layout(request))
+            for i in razbit:
+                if re.search(r'[^a-zA-Z,]',i) == None:
+                    vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = fix_layout(request))
             if request == "физфак":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Чемпион")
             if request == "лучший в спбгу":
