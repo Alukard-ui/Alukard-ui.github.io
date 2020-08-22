@@ -49,3 +49,5 @@ while True:
                     vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Забудь нахуй")
             if request == "что делать с матаном?":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Иди ботай")
+            if request == "*получил зачет*":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Пива этому господину")
