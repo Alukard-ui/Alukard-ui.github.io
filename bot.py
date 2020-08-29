@@ -2,6 +2,7 @@ import vk_api
 from vk_api.bot_longpoll import VkBotLongPoll, VkBotEventType
 from vk_api.utils import get_random_id
 import re
+import datetime
 
 vk = vk_api.VkApi(token="919e919e3815b66463acace0ec808f8e88d010e3e2863477fb93d1542a70cdc48245ee3622e9318f7320c")
 longpoll = VkBotLongPoll(vk, '197891905')
@@ -45,7 +46,7 @@ while True:
             if request == "ave иванов":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Ave матану")
             for i in razbit:
-                if i == "ансис" or i == "ансису" or i == "ансисом" or i == "ансиса" or i == "ansys":
+                if i == "ансис" or i == "ансису" or i == "ансисом" or i == "ансиса" or i == "ansys" or i == "ансисов":
                     vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Забудь нахуй")
             if request == "что делать с матаном?":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Иди ботай")
