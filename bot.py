@@ -3,6 +3,29 @@ from vk_api.bot_longpoll import VkBotLongPoll, VkBotEventType
 from vk_api.utils import get_random_id
 import re
 import datetime
+import requests
+from bs4 import BeautifulSoup
+import csv
+
+HOST = 'https://timetable.spbu.ru/'
+URLiof = 'https://timetable.spbu.ru/PHYS/StudentGroupEvents/Primary/276857/'
+data = '2020-09-07'
+HEADERS = {
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36 OPR/68.0.3618.206'
+}
+xz = datetime.date(year=2020, month=8, day=31)
+def get_html(url,params=''):
+    r = requests.get(url+params.strftime('%Y-%m-%d'),headers = HEADERS)
+    return r
+
+def get_content(html):
+    soup = BeautifulSoup(html,'lxml')
+    xz = []
+    items = soup.find_all("div", class_ ="panel panel-default")
+    for item in items:
+        xz.append( " ".join(item.text.split()))
+    return xz
 
 vk = vk_api.VkApi(token="919e919e3815b66463acace0ec808f8e88d010e3e2863477fb93d1542a70cdc48245ee3622e9318f7320c")
 longpoll = VkBotLongPoll(vk, '197891905')
@@ -10,7 +33,7 @@ vk = vk.get_api()
 _eng_chars = u"~!@#$%^&qwertyuiop[]asdfghjkl;'zxcvbnm,./QWERTYUIOP{}ASDFGHJKL:\"|ZXCVBNM<>?"
 _rus_chars = u"ё!\"№;%:?йцукенгшщзхъфывапролджэячсмитьбю.ЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭ/ЯЧСМИТЬБЮ,"
 _trans_table = dict(zip(_eng_chars, _rus_chars))
-
+ret = datetime.date(year=2020,month=9,day=10)
 def fix_layout(s):
     return u''.join([_trans_table.get(c, c) for c in s])
 print("Бот запущен")
@@ -70,3 +93,16 @@ while True:
                                                                                                    "https://disk.yandex.ru/client/disk/1%20Курс/Лабы/1\n-копилка ИОФ\n"
                                                                                                    "https://yadi.sk/d/VGymqWhp0uV44Q/_ЛАБЫ/1%20сем/001.Измерение%20длины%2C%20объема%20и%20плотности%20твёрдых%20тел%20с\n"
                                                                                                    "-общая копилка")
+            if request == "расписание иоф":
+                for i in range(30):
+                    if ret > xz:
+                        xz += datetime.timedelta(days=7)
+                    else:
+                        xz -= datetime.timedelta(days=7)
+                        html = get_html(URLiof,xz)
+                        wq=xz.day-ret.day
+                        vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message =get_content(html.text)[wq])
+                        break
+            if request == "расписание радиофизики":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = "Для вас впадлу писать смотрите сами")
+
