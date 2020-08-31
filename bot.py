@@ -9,12 +9,13 @@ import csv
 
 HOST = 'https://timetable.spbu.ru/'
 URLiof = 'https://timetable.spbu.ru/PHYS/StudentGroupEvents/Primary/276857/'
+URL20B006 = 'https://timetable.spbu.ru/PHYS/StudentGroupEvents/Primary/276754/'
 data = '2020-09-07'
 HEADERS = {
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36 OPR/68.0.3618.206'
 }
-xz = datetime.date(year=2020, month=8, day=31)
+
 def get_html(url,params=''):
     r = requests.get(url+params.strftime('%Y-%m-%d'),headers = HEADERS)
     return r
@@ -26,6 +27,16 @@ def get_content(html):
     for item in items:
         xz.append( " ".join(item.text.split()))
     return xz
+
+def ras(URL,xz):
+                for i in range(30):
+                    if  datetime.datetime.now() > xz:
+                        xz += datetime.timedelta(days=7)
+                    else:
+                        xz -= datetime.timedelta(days=7)
+                        html = get_html(URL,xz)
+                        wq=xz.day-ret.day
+                        vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message =get_content(html.text)[wq])
 
 vk = vk_api.VkApi(token="919e919e3815b66463acace0ec808f8e88d010e3e2863477fb93d1542a70cdc48245ee3622e9318f7320c")
 longpoll = VkBotLongPoll(vk, '197891905')
@@ -39,6 +50,7 @@ def fix_layout(s):
 print("Бот запущен")
 
 while True:
+    xz = datetime.date(year=2020, month=8, day=31)
     for event in longpoll.listen():
         if event.type == VkBotEventType.MESSAGE_NEW:
             request = event.object.message['text'].lower()
@@ -274,14 +286,9 @@ while True:
                                                                                                    "хз\n"
                                                                                                    "-общая копилка")
             if request == "расписание иоф":
-                for i in range(30):
-                    if  datetime.datetime.now() > xz:
-                        xz += datetime.timedelta(days=7)
-                    else:
-                        xz -= datetime.timedelta(days=7)
-                        html = get_html(URLiof,xz)
-                        wq=xz.day-ret.day
-                        vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message =get_content(html.text)[wq])
+                    ras(URLiof,xz)
             if request == "расписание радиофизика":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = "Для вас впадлу писать смотрите сами")
+            if request == "расписание ПМФ":
+                ras(URL20B006,xz)
 
