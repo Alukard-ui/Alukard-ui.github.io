@@ -33,7 +33,7 @@ vk = vk.get_api()
 _eng_chars = u"~!@#$%^&qwertyuiop[]asdfghjkl;'zxcvbnm,./QWERTYUIOP{}ASDFGHJKL:\"|ZXCVBNM<>?"
 _rus_chars = u"ё!\"№;%:?йцукенгшщзхъфывапролджэячсмитьбю.ЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭ/ЯЧСМИТЬБЮ,"
 _trans_table = dict(zip(_eng_chars, _rus_chars))
-ret = datetime.date(year=2020,month=9,day=10)
+ret = datetime.date(year=2020,month=9,day=8)
 def fix_layout(s):
     return u''.join([_trans_table.get(c, c) for c in s])
 print("Бот запущен")
@@ -88,10 +88,190 @@ while True:
                                                                                            "Куратор иностранных обучающихся ФФ - Тосио Наганава (3 курс)"
                                                                                            "Не бойтесь задавать вопросы, мы будем рады помочь освоиться в новой для вас среде😊")
             if request == "лаба 1":
-                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/001.%20Измерение%20длины%2C%20объёма%20и%20плотности/\n"
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/\n"
                                                                                                    "-копилка стариков\n"
                                                                                                    "https://disk.yandex.ru/client/disk/1%20Курс/Лабы/1\n-копилка ИОФ\n"
                                                                                                    "https://yadi.sk/d/VGymqWhp0uV44Q/_ЛАБЫ/1%20сем/001.Измерение%20длины%2C%20объема%20и%20плотности%20твёрдых%20тел%20с\n"
+                                                                                                   "-общая копилка")
+            if request == "лаба 2":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/001.%20Измерение%20длины%2C%20объёма%20и%20плотности/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "https://disk.yandex.ru/client/disk/1%20Курс/Лабы/002\n-копилка ИОФ\n"
+                                                                                                   "https://yadi.sk/d/VGymqWhp0uV44Q/_ЛАБЫ/1%20сем/002.Изучение%20упругих%20свойств%20спиральной%20пружины%20и%20тонкой%20пластины\n"
+                                                                                                   "-общая копилка")
+
+            if request == "лаба 3":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/003.%20Гидростатическое%20взвешивание/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "https://disk.yandex.ru/client/disk/1%20Курс/Лабы/003\n-копилка ИОФ\n"
+                                                                                                   "https://yadi.sk/d/VGymqWhp0uV44Q/_ЛАБЫ/1%20сем/003.Определение%20плотности%20тела%20способом%20гидростатического%20взвешивания\n"
+                                                                                                   "-общая копилка")
+            if request == "лаба 4":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/004.%20Случайные%20ошибки/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "https://disk.yandex.ru/client/disk/1%20Курс/Лабы/004\n-копилка ИОФ\n"
+                                                                                                   "https://yadi.sk/d/VGymqWhp0uV44Q/_ЛАБЫ/1%20сем/004.Случайные%20ошибки\n"
+                                                                                                   "-общая копилка")
+            if request == "лаба 5":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/005.%20Прецессия%20и%20нутация/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "https://disk.yandex.ru/client/disk/1%20Курс/Лабы/005\n-копилка ИОФ\n"
+                                                                                                   "https://yadi.sk/d/VGymqWhp0uV44Q/_ЛАБЫ/1%20сем/005.Прецессия%20и%20нутация\n"
+                                                                                                   "-общая копилка")
+            if request == "лаба 6":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/006.%20Торсионный%20осциллятор/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "https://disk.yandex.ru/client/disk/1%20Курс/Лабы/006\n-копилка ИОФ\n"
+                                                                                                   "https://yadi.sk/d/VGymqWhp0uV44Q/_ЛАБЫ/1%20сем/006.Торсионный%20осциллятор\n"
+                                                                                                   "-общая копилка")
+            if request == "лаба 8":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/008.%20Колебания%20струны/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "https://disk.yandex.ru/client/disk/1%20Курс/Лабы/008\n-копилка ИОФ\n"
+                                                                                                   "https://yadi.sk/d/VGymqWhp0uV44Q/_ЛАБЫ/1%20сем/008.Колебания%20струны\n"
+                                                                                                   "-общая копилка")
+            if request == "лаба 9":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/009.%20Скорость%20звука/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "https://disk.yandex.ru/client/disk/1%20Курс/Лабы/009\n-копилка ИОФ\n"
+                                                                                                   "хз\n"
+                                                                                                   "-общая копилка")
+            if request == "лаба 10":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/010.%20Генератор%20тока/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "https://disk.yandex.ru/client/disk/1%20Курс/Лабы/010\n-копилка ИОФ\n"
+                                                                                                   "https://yadi.sk/d/VGymqWhp0uV44Q/_ЛАБЫ/1%20сем/010.Генератор%20тока\n"
+                                                                                                   "-общая копилка")
+            if request == "лаба 11":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/011.%20Аэродинамическая%20труба/\n"
+                                                                                                   "-копилка стариков(11-1)\n"
+                                                                                                   "https://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/011.%20Исследование%20теплопередачи%20в%20газах/\n-копилка стариков(11-2)")
+            if request == "лаба 10":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/014.%20Вязкость%20жидкости/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "хз\n-копилка ИОФ\n"
+                                                                                                   "хз\n"
+                                                                                                   "-общая копилка")
+            if request == "лаба 14":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/014.%20Вязкость%20жидкости/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "хз\n-копилка ИОФ\n"
+                                                                                                   "хз\n"
+                                                                                                   "-общая копилка")
+            if request == "лаба 15":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/015.%20Поверхностное%20натяжение/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "хз\n-копилка ИОФ\n"
+                                                                                                   "хз\n"
+                                                                                                   "-общая копилка")
+            if request == "лаба 16":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/016.%20Теплота%20парообразования/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "хз\n-копилка ИОФ\n"
+                                                                                                   "хз\n"
+                                                                                                   "-общая копилка")
+            if request == "лаба 17":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/017.%20Фазовый%20переход/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "хз\n-копилка ИОФ\n"
+                                                                                                   "хз\n"
+                                                                                                   "-общая копилка")
+            if request == "лаба 19":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/019.%20Тепловой%20насос/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "хз\n-копилка ИОФ\n"
+                                                                                                   "хз\n"
+                                                                                                   "-общая копилка")
+            if request == "лаба 22":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/022.%20Адиабата/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "хз\n-копилка ИОФ\n"
+                                                                                                   "хз\n"
+                                                                                                   "-общая копилка")
+            if request == "лаба 23":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/023.%20Законы%20идеального%20газа/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "хз\n-копилка ИОФ\n"
+                                                                                                   "хз\n"
+                                                                                                   "-общая копилка")
+            if request == "лаба 24":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/024.%20Кривая%20упругости/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "хз\n-копилка ИОФ\n"
+                                                                                                   "хз\n"
+                                                                                                   "-общая копилка")
+            if request == "лаба 29":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/029.%20Изучение%20распределения%20случайных%20ошибок%20измерений/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "https://disk.yandex.ru/client/disk/1%20Курс/Лабы/029\n-копилка ИОФ\n"
+                                                                                                   "хз\n"
+                                                                                                   "-общая копилка")
+            if request == "лаба 31":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/031.%20Удельный%20заряд%20электрона/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "https://disk.yandex.ru/client/disk/1%20Курс/Лабы/031\n-копилка ИОФ\n"
+                                                                                                   "https://yadi.sk/d/VGymqWhp0uV44Q/_ЛАБЫ/1%20сем/031.Удельный%20заряд%20электрона\n"
+                                                                                                   "-общая копилка")
+            if request == "лаба 41":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/041.%20Маятник%20Катера/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "https://disk.yandex.ru/client/disk/1%20Курс/Лабы/041\n-копилка ИОФ\n"
+                                                                                                   "https://yadi.sk/d/VGymqWhp0uV44Q/_ЛАБЫ/1%20сем/041.Маятник%20Катера\n"
+                                                                                                   "-общая копилка")
+            if request == "лаба 41":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/047.%20Скорость%20света/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "https://disk.yandex.ru/client/disk/1%20Курс/Лабы/047\n-копилка ИОФ\n"
+                                                                                                   "хз\n"
+                                                                                                   "-общая копилка")
+            if request == "лаба 49":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/049.%20Моменты%20инерции/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "https://disk.yandex.ru/client/disk/1%20Курс/Лабы/049\n-копилка ИОФ\n"
+                                                                                                   "https://yadi.sk/d/VGymqWhp0uV44Q/_ЛАБЫ/1%20сем/049.Моменты%20инерции\n"
+                                                                                                   "-общая копилка")
+            if request == "лаба 50":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/050.%20Проверка%20законов%20Ньютона/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "https://disk.yandex.ru/client/disk/1%20Курс/Лабы/050А\n-копилка ИОФ(50А)\n"
+                                                                                                   "https://disk.yandex.ru/client/disk/1%20Курс/Лабы/050Б\n-копилка ИОФ(50Б)\n"
+                                                                                                   "https://yadi.sk/d/VGymqWhp0uV44Q/_ЛАБЫ/1%20сем/050.Проверка%20законов%20Ньютона\n"
+                                                                                                   "-общая копилка")
+            if request == "лаба 52":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/052.%20Регулировка%20токов%20и%20напряжений/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "https://disk.yandex.ru/client/disk/1%20Курс/Лабы/052\n-копилка ИОФ(50А)\n"
+                                                                                                   "https://yadi.sk/d/VGymqWhp0uV44Q/_ЛАБЫ/1%20сем/052.Регулировка%20токов%20и%20напряжений\n"
+                                                                                                   "-общая копилка")
+            if request == "лаба 54":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/054.%20Осциллограф/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "https://disk.yandex.ru/client/disk/1%20Курс/Лабы/054\n-копилка ИОФ(50А)\n"
+                                                                                                   "хз\n"
+                                                                                                   "-общая копилка")
+            if request == "лаба 54":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/055.%20Термопара/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "хз\n-копилка ИОФ(50А)\n"
+                                                                                                   "хз\n"
+                                                                                                   "-общая копилка")
+            if request == "лаба 61":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/061.%20Определение%20коэффициента%20поверхностного%20натяжения%20жидкостей/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "хз\n-копилка ИОФ(50А)\n"
+                                                                                                   "хз\n"
+                                                                                                   "-общая копилка")
+            if request == "лаба 91":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/090.%20Определение%20моментов%20инерции%20тел/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "хз\n-копилка ИОФ(50А)\n"
+                                                                                                   "хз\n"
+                                                                                                   "-общая копилка")
+            if request == "лаба 137":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/137.%20Холодильник%20Пельтье/\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "https://disk.yandex.ru/client/disk/1%20Курс/Лабы/137\n-копилка ИОФ(50А)\n"
+                                                                                                   "хз\n"
                                                                                                    "-общая копилка")
             if request == "расписание иоф":
                 for i in range(30):
@@ -102,7 +282,6 @@ while True:
                         html = get_html(URLiof,xz)
                         wq=xz.day-ret.day
                         vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message =get_content(html.text)[wq])
-                        break
-            if request == "расписание радиофизики":
+            if request == "расписание радиофизика":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = "Для вас впадлу писать смотрите сами")
 
