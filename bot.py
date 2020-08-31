@@ -240,37 +240,37 @@ while True:
             if request == "лаба 52":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/052.%20Регулировка%20токов%20и%20напряжений/\n"
                                                                                                    "-копилка стариков\n"
-                                                                                                   "https://disk.yandex.ru/client/disk/1%20Курс/Лабы/052\n-копилка ИОФ(50А)\n"
+                                                                                                   "https://disk.yandex.ru/client/disk/1%20Курс/Лабы/052\n-копилка ИОФ\n"
                                                                                                    "https://yadi.sk/d/VGymqWhp0uV44Q/_ЛАБЫ/1%20сем/052.Регулировка%20токов%20и%20напряжений\n"
                                                                                                    "-общая копилка")
             if request == "лаба 54":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/054.%20Осциллограф/\n"
                                                                                                    "-копилка стариков\n"
-                                                                                                   "https://disk.yandex.ru/client/disk/1%20Курс/Лабы/054\n-копилка ИОФ(50А)\n"
+                                                                                                   "https://disk.yandex.ru/client/disk/1%20Курс/Лабы/054\n-копилка ИОФ\n"
                                                                                                    "хз\n"
                                                                                                    "-общая копилка")
             if request == "лаба 54":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/055.%20Термопара/\n"
                                                                                                    "-копилка стариков\n"
-                                                                                                   "хз\n-копилка ИОФ(50А)\n"
+                                                                                                   "хз\n-копилка ИОФ\n"
                                                                                                    "хз\n"
                                                                                                    "-общая копилка")
             if request == "лаба 61":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/061.%20Определение%20коэффициента%20поверхностного%20натяжения%20жидкостей/\n"
                                                                                                    "-копилка стариков\n"
-                                                                                                   "хз\n-копилка ИОФ(50А)\n"
+                                                                                                   "хз\n-копилка ИОФ\n"
                                                                                                    "хз\n"
                                                                                                    "-общая копилка")
             if request == "лаба 91":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/090.%20Определение%20моментов%20инерции%20тел/\n"
                                                                                                    "-копилка стариков\n"
-                                                                                                   "хз\n-копилка ИОФ(50А)\n"
+                                                                                                   "хз\n-копилка ИОФ\n"
                                                                                                    "хз\n"
                                                                                                    "-общая копилка")
             if request == "лаба 137":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/137.%20Холодильник%20Пельтье/\n"
                                                                                                    "-копилка стариков\n"
-                                                                                                   "https://disk.yandex.ru/client/disk/1%20Курс/Лабы/137\n-копилка ИОФ(50А)\n"
+                                                                                                   "https://disk.yandex.ru/client/disk/1%20Курс/Лабы/137\n-копилка ИОФ\n"
                                                                                                    "хз\n"
                                                                                                    "-общая копилка")
             if request == "расписание иоф":
