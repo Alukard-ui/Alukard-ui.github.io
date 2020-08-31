@@ -275,7 +275,7 @@ while True:
                                                                                                    "-общая копилка")
             if request == "расписание иоф":
                 for i in range(30):
-                    if ret > xz:
+                    if  datetime.datetime.now() > xz:
                         xz += datetime.timedelta(days=7)
                     else:
                         xz -= datetime.timedelta(days=7)
