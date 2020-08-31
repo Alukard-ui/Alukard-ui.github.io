@@ -30,13 +30,14 @@ def get_content(html):
 
 def ras(URL,xz):
                 for i in range(30):
-                    if  datetime.datetime.now() > xz:
+                    if   ret > xz:
                         xz += datetime.timedelta(days=7)
                     else:
                         xz -= datetime.timedelta(days=7)
                         html = get_html(URL,xz)
                         wq=xz.day-ret.day
                         vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message =get_content(html.text)[wq])
+                        break
 
 vk = vk_api.VkApi(token="919e919e3815b66463acace0ec808f8e88d010e3e2863477fb93d1542a70cdc48245ee3622e9318f7320c")
 longpoll = VkBotLongPoll(vk, '197891905')
@@ -63,6 +64,7 @@ while True:
                     #if re.search(r'[a-z]',i) != None:
                         #vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = fix_layout(request))
                         #break
+            ret = datetime.date.today()
             if request == "физфак":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Чемпион")
             if request == "лучший в спбгу":
