@@ -30,7 +30,7 @@ def get_content(html):
 
 def ras(URL,xz):
                 for i in range(30):
-                    if   ret >= xz:
+                    if   ret > xz:
                         xz += datetime.timedelta(days=7)
                     else:
                         xz -= datetime.timedelta(days=7)
