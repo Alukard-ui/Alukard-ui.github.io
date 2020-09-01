@@ -28,16 +28,22 @@ def get_content(html):
         xz.append( " ".join(item.text.split()))
     return xz
 
-def ras(URL,xz):
+def ras(URL,xz,ret):
                 for i in range(30):
-                    if   ret > xz:
-                        xz += datetime.timedelta(days=7)
-                    else:
-                        xz -= datetime.timedelta(days=7)
+                    if ret == xz:
                         html = get_html(URL,xz)
                         wq=xz.day-ret.day
                         vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message =get_content(html.text)[wq])
                         break
+                    else:
+                        if   ret >= xz:
+                            xz += datetime.timedelta(days=7)
+                        else:
+                            xz -= datetime.timedelta(days=7)
+                            html = get_html(URL,xz)
+                            wq=xz.day-ret.day
+                            vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message =get_content(html.text)[wq])
+                            break
 
 vk = vk_api.VkApi(token="919e919e3815b66463acace0ec808f8e88d010e3e2863477fb93d1542a70cdc48245ee3622e9318f7320c")
 longpoll = VkBotLongPoll(vk, '197891905')
@@ -45,12 +51,12 @@ vk = vk.get_api()
 _eng_chars = u"~!@#$%^&qwertyuiop[]asdfghjkl;'zxcvbnm,./QWERTYUIOP{}ASDFGHJKL:\"|ZXCVBNM<>?"
 _rus_chars = u"ё!\"№;%:?йцукенгшщзхъфывапролджэячсмитьбю.ЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭ/ЯЧСМИТЬБЮ,"
 _trans_table = dict(zip(_eng_chars, _rus_chars))
-xz = datetime.date(year=2020,month=8,day=24)
 def fix_layout(s):
     return u''.join([_trans_table.get(c, c) for c in s])
 print("Бот запущен")
 
 while True:
+    xz = datetime.date(year=2020, month=8, day=31)
     for event in longpoll.listen():
         if event.type == VkBotEventType.MESSAGE_NEW:
             request = event.object.message['text'].lower()
