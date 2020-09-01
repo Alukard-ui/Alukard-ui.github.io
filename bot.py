@@ -45,13 +45,12 @@ vk = vk.get_api()
 _eng_chars = u"~!@#$%^&qwertyuiop[]asdfghjkl;'zxcvbnm,./QWERTYUIOP{}ASDFGHJKL:\"|ZXCVBNM<>?"
 _rus_chars = u"ё!\"№;%:?йцукенгшщзхъфывапролджэячсмитьбю.ЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭ/ЯЧСМИТЬБЮ,"
 _trans_table = dict(zip(_eng_chars, _rus_chars))
-ret = datetime.date(year=2020,month=9,day=8)
+xz = datetime.date(year=2020,month=8,day=24)
 def fix_layout(s):
     return u''.join([_trans_table.get(c, c) for c in s])
 print("Бот запущен")
 
 while True:
-    xz = datetime.date(year=2020, month=8, day=31)
     for event in longpoll.listen():
         if event.type == VkBotEventType.MESSAGE_NEW:
             request = event.object.message['text'].lower()
