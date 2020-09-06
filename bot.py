@@ -32,18 +32,22 @@ def ras(URL,xz,ret):
                 for i in range(30):
                     if ret == xz:
                         html = get_html(URL,xz)
-                        wq=xz.day-ret.day
-                        vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message =get_content(html.text)[wq])
+                        vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message =get_content(html.text)[2])
                         break
                     else:
-                        if   ret >= xz:
+                        if  ret > xz:
                             xz += datetime.timedelta(days=7)
                         else:
                             xz -= datetime.timedelta(days=7)
                             html = get_html(URL,xz)
                             wq=xz.day-ret.day
-                            vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message =get_content(html.text)[wq])
-                            break
+                            print(wq)
+                            print(xz)
+                            if wq == 6:
+                                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message ="Воскресенье идиот")
+                            else:
+                                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message =get_content(html.text)[wq+2])
+                                break
 
 vk = vk_api.VkApi(token="919e919e3815b66463acace0ec808f8e88d010e3e2863477fb93d1542a70cdc48245ee3622e9318f7320c")
 longpoll = VkBotLongPoll(vk, '197891905')
@@ -57,6 +61,7 @@ print("Бот запущен")
 
 while True:
     xz = datetime.date(year=2020, month=8, day=31)
+    ret = datetime.date.today()
     for event in longpoll.listen():
         if event.type == VkBotEventType.MESSAGE_NEW:
             request = event.object.message['text'].lower()
@@ -69,7 +74,6 @@ while True:
                     #if re.search(r'[a-z]',i) != None:
                         #vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = fix_layout(request))
                         #break
-            ret = datetime.date.today()
             if request == "физфак":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Чемпион")
             if request == "лучший в спбгу":
@@ -293,9 +297,9 @@ while True:
                                                                                                    "хз\n"
                                                                                                    "-общая копилка")
             if request == "расписание иоф":
-                    ras(URLiof,xz)
+                ras(URLiof,xz,ret)
             if request == "расписание радиофизика":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = "Для вас впадлу писать смотрите сами")
             if request == "расписание ПМФ":
-                ras(URL20B006,xz)
+                ras(URL20B006,xz,ret)
 
