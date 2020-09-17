@@ -9,7 +9,8 @@ import csv
 
 HOST = 'https://timetable.spbu.ru/'
 URLiof = 'https://timetable.spbu.ru/PHYS/StudentGroupEvents/Primary/276857/'
-URL20B006 = 'https://timetable.spbu.ru/PHYS/StudentGroupEvents/Primary/276754/'
+URL20B006 = 'https://timetable.spbu.ru/PHYS/StudentGroupEvents/Primary/276325/'
+URLiof2020='https://timetable.spbu.ru/PHYS/StudentGroupEvents/Primary/276259/'
 data = '2020-09-07'
 HEADERS = {
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
@@ -34,20 +35,17 @@ def ras(URL,xz,ret):
                         html = get_html(URL,xz)
                         vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message =get_content(html.text)[2])
                         break
+                    elif  ret > xz:
+                        xz += datetime.timedelta(days=7)
                     else:
-                        if  ret > xz:
-                            xz += datetime.timedelta(days=7)
+                        xz -= datetime.timedelta(days=7)
+                        html = get_html(URL,xz)
+                        wq=ret.day-xz.day
+                        if wq == 6:
+                            vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message ="Воскресенье идиот")
                         else:
-                            xz -= datetime.timedelta(days=7)
-                            html = get_html(URL,xz)
-                            wq=xz.day-ret.day
-                            print(wq)
-                            print(xz)
-                            if wq == 6:
-                                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message ="Воскресенье идиот")
-                            else:
-                                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message =get_content(html.text)[wq+2])
-                                break
+                            vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message =get_content(html.text)[wq+2])
+                            break
 
 vk = vk_api.VkApi(token="919e919e3815b66463acace0ec808f8e88d010e3e2863477fb93d1542a70cdc48245ee3622e9318f7320c")
 longpoll = VkBotLongPoll(vk, '197891905')
@@ -300,6 +298,18 @@ while True:
                 ras(URLiof,xz,ret)
             if request == "расписание радиофизика":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = "Для вас впадлу писать смотрите сами")
-            if request == "расписание ПМФ":
+            if request == "расписание пмф":
                 ras(URL20B006,xz,ret)
+            if request == "раписание иоф2020":
+                ras(URLiof2020,xz,ret)
+            if request == "копилка" or request == "копилки":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = "\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/ -копилка стариков\n"
+                                                                                           "\nhttps://yadi.sk/d/VGymqWhp0uV44Q -копилка\n"
+                                                                                           "\nhttps://disk.yandex.ru/client/disk/1%20Курс -копилка ИОФа")
+            if request == "лабы":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,attachment ='wall-197891905_2',)
+            for i in razbit:
+                if i == "рома" or i == "роман" or i == "ром" or i=="рооома":
+                    vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "@psheroma,катриджы забери")
+
 
