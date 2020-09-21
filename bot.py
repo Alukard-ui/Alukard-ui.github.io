@@ -10,7 +10,7 @@ import csv
 HOST = 'https://timetable.spbu.ru/'
 URLiof = 'https://timetable.spbu.ru/PHYS/StudentGroupEvents/Primary/276857/'
 URL20B006 = 'https://timetable.spbu.ru/PHYS/StudentGroupEvents/Primary/276325/'
-URLiof2020='https://timetable.spbu.ru/PHYS/StudentGroupEvents/Primary/276259/'
+URLiof2020='https://timetable.spbu.ru/PHYS/StudentGroupEvents/Primary/298316/'
 data = '2020-09-07'
 HEADERS = {
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
@@ -310,6 +310,6 @@ while True:
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,attachment ='wall-197891905_2',)
             for i in razbit:
                 if i == "рома" or i == "роман" or i == "ром" or i=="рооома":
-                    vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "@psheroma,катриджы забери")
+                    vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "@psheroma(Пидорас), катриджы забери")
 
 
