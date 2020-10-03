@@ -308,8 +308,8 @@ while True:
                                                                                            "\nhttps://disk.yandex.ru/client/disk/1%20Курс -копилка ИОФа")
             if request == "лабы":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,attachment ='wall-197891905_2',)
-            for i in razbit:
-                if i == "макар" or i == "макару":
-                    vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "на подсосе")
+            #for i in razbit:
+                #if i == "макар" or i == "макару":
+                    #vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "на подсосе")
 
 
