@@ -309,7 +309,9 @@ while True:
             if request == "лабы":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,attachment ='wall-197891905_2',)
             #for i in razbit:
-                #if i == "макар" or i == "макару":
-                    #vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "на подсосе")
+                #if i == "рома" or i == "роман" or i == "ром" or i=="рооома":
+                    #vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "@psheroma(Пидорас), катриджы забери")
+            if request == "лабы б04":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,attachment ='wall-197891905_3%2Fall',)
 
 
