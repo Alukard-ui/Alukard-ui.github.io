@@ -76,9 +76,9 @@ while True:
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Чемпион")
             if request == "лучший в спбгу":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "факультет физический, кто идет в ПМПУ тот пидр венерический!")
-            #for i in razbit:
-             #   if i == "бот":
-              #      vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Нет, блять, не бот")
+            for i in razbit:
+                if i == "бот":
+                    vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Нет, блять, не бот")
             if request == "слава иванову":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Слава матану")
             if request == "аве иванову":
