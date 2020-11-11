@@ -297,7 +297,7 @@ while True:
             if request == "расписание иоф":
                 ras(URLiof,xz,ret)
             if request == "расписание радиофизика":
-                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = "Для вас впадлу писать смотрите сами")
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = "Для вас впадлу писать смотрите сам")
             if request == "расписание пмф":
                 ras(URL20B006,xz,ret)
             if request == "раписание иоф2020":
