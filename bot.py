@@ -139,6 +139,12 @@ while True:
                                                                                                    "https://disk.yandex.ru/client/disk/1%20Курс/Лабы/005\n-копилка ИОФ\n"
                                                                                                    "https://yadi.sk/d/VGymqWhp0uV44Q/_ЛАБЫ/1%20сем/005.Прецессия%20и%20нутация\n"
                                                                                                    "-общая копилка")
+            if request == "лаба хз":
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"хз\n"
+                                                                                                   "-копилка стариков\n"
+                                                                                                   "хз\n-копилка ИОФ\n"
+                                                                                                   "хз\n"
+                                                                                                   "-общая копилка")
             if request == "лаба 6":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = request+"\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/Лабы/1%20курс/006.%20Торсионный%20осциллятор/\n"
                                                                                                    "-копилка стариков\n"
