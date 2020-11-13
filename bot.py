@@ -324,6 +324,7 @@ while True:
             if request == "[club197891905|@club197891905], анекдот" or request == "[club197891905|@club197891905],анекдот" or request == "рецензист, анекдот" or request == "рецензист,анекдот" or request == "рецензист анекдот":
                 f=open('aneki.txt','r',encoding="utf-8")
                 an=f.read().split('/')
+                f.close()
                 y=random.randint(0,len(an)-1)
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message =an[y],)
             if request!='' and random.random()<=0.01:
