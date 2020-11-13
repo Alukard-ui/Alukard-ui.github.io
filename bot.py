@@ -4,6 +4,7 @@ from vk_api.utils import get_random_id
 import re
 import datetime
 import requests
+import random
 from bs4 import BeautifulSoup
 import csv
 
@@ -320,4 +321,14 @@ while True:
             if request == "лабы б04":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,attachment ='wall-197891905_3%2Fall',)
 
-
+            if request == "[club197891905|@club197891905], анекдот" or request == "[club197891905|@club197891905],анекдот" or request == "рецензист, анекдот" or request == "рецензист,анекдот" or request == "рецензист анекдот":
+                f=open('aneki.txt','r',encoding="utf-8")
+                an=f.read().split('/')
+                y=random.randint(0,len(an)-1)
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message =an[y],)
+            if request!='' and random.random()<=0.01:
+                f=open('frazi.txt','r',encoding="utf-8")
+                an=f.read().split('/')
+                f.close()
+                y = random.randint(0, len(an)-1)
+                vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message =an[y],)
