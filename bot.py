@@ -77,9 +77,9 @@ while True:
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Чемпион")
             if request == "лучший в спбгу":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "факультет физический, кто идет в ПМПУ тот пидр венерический!")
-            #for i in razbit:
-                #if i == "бот":
-                    #vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Нет, блять, не бот")
+            for i in razbit:
+                if i == "бот":
+                    vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Нет, блять, не бот")
             if request == "слава иванову":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Слава матану")
             if request == "аве иванову":
@@ -327,7 +327,7 @@ while True:
                 f.close()
                 y=random.randint(0,len(an)-1)
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message =an[y],)
-            if request!='' and random.random()<=0.01:
+            if request!='' and random.random()<=0.001:
                 f=open('frazi.txt','r',encoding="utf-8")
                 an=f.read().split('/')
                 f.close()
