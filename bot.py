@@ -96,8 +96,11 @@ while True:
             if request == "что делать с матаном?":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Иди ботай")
             for i in razbit:
-                if i == "ансис" or i == "ансису" or i == "ансисом" or i == "ансиса" or i == "ansys" or i == "ансисов":
+                if i == ("ансис" or i == "ансису" or i == "ансисом" or i == "ансиса" or i == "ansys" or i == "ансисов") and random.random()<=0.01:
                      vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Да поможет тебе Бог(Аня)")
+            for i in razbit:
+                if i == ("ансис" or i == "ансису" or i == "ансисом" or i == "ансиса" or i == "ansys" or i == "ансисов") and random.random()<=0.01:
+                     vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "https://www.ansys.com")
             if request == "кураторы":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = "Пора познакомить вас с вашими кураторами, к которым вы можете обращаться по интересующим вопросам."
                                                                                            "Распределение на группы (для всех кроме радиофизики (Электрочто-то там) и ИОФ) произойдет в начале семестра.\n"
