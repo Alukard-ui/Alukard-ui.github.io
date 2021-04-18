@@ -318,7 +318,7 @@ while True:
             if request == "копилка" or request == "копилки":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,message = "\nhttps://cloud.mail.ru/public/E1Gt/XgKpuQDRE/ -копилка стариков\n"
                                                                                            "\nhttps://yadi.sk/d/VGymqWhp0uV44Q -копилка\n"
-                                                                                           "\nhttps://yadi.sk/d/Cp1kYo1cKhb77Q -копилка И2")
+                                                                                           "\nhttps://yadi.sk/d/Cp1kYo1cKhb77Q -копилка №2")
             if request == "лабы":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida,attachment ='wall-197891905_2',)
             #for i in razbit:
