@@ -84,7 +84,7 @@ while True:
                             peer_ida = event.object.message['peer_id']
                             reply = event.object.message['date']
                             linka = event.object.message['attachments']
-                            Chatter.Responce(request)
+                            vk.messages.send(random_id=get_random_id(), peer_id=peer_ida, message=Chatter.Responce(request))
             if request == "физфак":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Чемпион")
             if request == "лучший в спбгу":
