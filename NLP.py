@@ -7,14 +7,14 @@ class Chatter:
 
     def __init__(self,content):
         self.config = content
-        zfile = zipfile.ZipFile('dialogues.zip', 'r')  # open file
-        for filename in zfile.namelist():
-            zfile.extract(filename)
-        with open('dialogues.txt', 'r', encoding='utf-8') as file:
-            contents = file.read()
-        dialogues_str = contents.split('\n\n')
-        self.dialogues = [dialogues_str.split('\n')[:2] for dialogues_str in dialogues_str]
-        self.dialogues_filter = []
+        # zfile = zipfile.ZipFile('dialogues.zip', 'r')  # open file
+        # for filename in zfile.namelist():
+        #     zfile.extract(filename)
+        # with open('dialogues.txt', 'r', encoding='utf-8') as file:
+        #     contents = file.read()
+        # dialogues_str = contents.split('\n\n')
+        # self.dialogues = [dialogues_str.split('\n')[:2] for dialogues_str in dialogues_str]
+        # self.dialogues_filter = []
 
 
     def filter_text(self,text):
@@ -74,9 +74,9 @@ class Chatter:
             if answer:
                 return answer
         # Generate approach based on the context answer
-        answer = self.generate_answer_by_text(question)
-        if answer:
-            return answer
+        #answer = self.generate_answer_by_text(question)
+        #if answer:
+         #   return answer
         # Use stub
         answer = self.get_failure_phrase()
         return answer

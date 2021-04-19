@@ -62,8 +62,8 @@ print("Бот запущен")
 while True:
     xz = datetime.date(year=2020, month=8, day=31)
     ret = datetime.date.today()
-    Chatter.dialogues_response()
     Chatter = Chatter(content=bot_config.init)
+    #Chatter.dialogues_response()
     for event in longpoll.listen():
         if event.type == VkBotEventType.MESSAGE_NEW:
             request = event.object.message['text'].lower()
