@@ -4,7 +4,7 @@ from random import choice
 from nltk import edit_distance
 
 
-class Chatter():
+class Chatter:
 
     def __init__(self,content):
         self.config = content
