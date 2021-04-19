@@ -6,7 +6,8 @@ import datetime
 import requests
 import random
 from bs4 import BeautifulSoup
-import csv
+import bot_config
+import NLP
 
 HOST = 'https://timetable.spbu.ru/'
 URLiof = 'https://timetable.spbu.ru/PHYS/StudentGroupEvents/Primary/276857/'
@@ -61,6 +62,7 @@ print("Бот запущен")
 while True:
     xz = datetime.date(year=2020, month=8, day=31)
     ret = datetime.date.today()
+    Chatter = Chatter(bot_config)
     for event in longpoll.listen():
         if event.type == VkBotEventType.MESSAGE_NEW:
             request = event.object.message['text'].lower()
@@ -73,6 +75,16 @@ while True:
                     #if re.search(r'[a-z]',i) != None:
                         #vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = fix_layout(request))
                         #break
+            if request == "слава лоли":
+                vk.messages.send(random_id=get_random_id(), peer_id=peer_ida, message="Смерть лоликонщикам")
+                while request not in ['все хватит','выход']:
+                    for event in longpoll.listen():
+                        if event.type == VkBotEventType.MESSAGE_NEW:
+                            request = event.object.message['text'].lower()
+                            peer_ida = event.object.message['peer_id']
+                            reply = event.object.message['date']
+                            linka = event.object.message['attachments']
+                            Chatter.Responce(request)
             if request == "физфак":
                 vk.messages.send(random_id = get_random_id(), peer_id = peer_ida, message = "Чемпион")
             if request == "лучший в спбгу":
