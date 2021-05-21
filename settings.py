@@ -21,6 +21,14 @@ INTENTS = [
         'answer': 'https://cloud.mail.ru/public/E1Gt/XgKpuQDRE/ - копилка стариков\n'
                   'https://disk.yandex.ru/d/VGymqWhp0uV44Q - копилка\n'
                   'https://disk.yandex.ru/d/Cp1kYo1cKhb77Q - копилка №2'
+    },
+    {
+        'name':'Help',
+        'tokens':('рецензист','рецензист'),
+        'scenario':None,
+        'answer':'Руководсто по ебле рецензиста:\n'
+                 '1.Для вызова лаб достаточно ввсети №[курс][номер лабы], для бесед и оправить сообщение с текстом'
+                 '"лаба" или "лабораторная работа"'
     }
 ]
 
