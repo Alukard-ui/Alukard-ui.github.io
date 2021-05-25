@@ -25,7 +25,7 @@ INTENTS = [
     },
     {
         'name': 'Anecdote',
-        'tokens': ("рецензист анекдот"),
+        'tokens': ("рецензист анекдот","рецензист анекдот"),
         'scenario': None,
         'answer': None,
         'group_handler': 'group_handler_anecdote'

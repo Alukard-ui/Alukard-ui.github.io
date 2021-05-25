@@ -1,1 +1,10 @@
-
+[2021-05-25 15:05:15,215 bot ERROR] Ошибка обработки
+Traceback (most recent call last):
+  File "E:\PycharmProjects\Reviewer\bot.py", line 34, in run
+    self.on_event(event)
+  File "<string>", line 2, in on_event
+  File "E:\PycharmProjects\Reviewer\vk_bot\lib\site-packages\pony\orm\core.py", line 533, in new_func
+    result = func(*args, **kwargs)
+  File "E:\PycharmProjects\Reviewer\bot.py", line 65, in on_event
+    if intent['group_handler']:
+KeyError: 'group_handler'
