@@ -16,7 +16,7 @@ INTENTS = [
     },
     {
         'name': 'PiggyBank',
-        'tokens': ("ссылка накопилка", "ссылки накопилки"),
+        'tokens': ("ссылка накопилка", "ссылки накопилки","/копилка"),
         'scenario': None,
         'answer': 'https://cloud.mail.ru/public/E1Gt/XgKpuQDRE/ - копилка стариков\n'
                   'https://disk.yandex.ru/d/VGymqWhp0uV44Q - копилка\n'
