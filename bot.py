@@ -62,13 +62,11 @@ class Bot:
                     if intent['answer']:
                         text_to_send = intent['answer']
                         self.send_message(text_to_send, user_id)
-                    break
-            if self.findeLab(text):
-                old,new,IOF = self.findeLab(text)
-                text = f'{old} - копилка стариков\n' \
-                       f'{new} - копилка\n' \
-                       f'{IOF} - копилка №2'
-                self.send_message(text,user_id)
+                    if intent['group_handler']:
+                        handler = getattr(handlers,intent['group_handler'])
+                        text_to_send = handler(text)
+                        if text_to_send:
+                            self.send_message(text_to_send,user_id)
 
 
 
@@ -98,18 +96,6 @@ class Bot:
         else:
             text_to_send = step['failure_text']
         return text_to_send
-
-    def findeLab(self,text):
-        find = re.findall(handlers.re_number,text)
-        print(type(find[0]))
-        numberLab = LaboratoryWork.get(id=find[0])
-        if numberLab:
-            new = numberLab.oldPiggyBank
-            old = numberLab.newPiggyBank
-            IOF = numberLab.IOFPiggyBank
-            return new,old,IOF
-        else:
-            return None
 
     def get_user_info(self,user_id):
         return self.vk.method('users.get', {'user_ids':user_id})

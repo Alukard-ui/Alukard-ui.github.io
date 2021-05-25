@@ -12,27 +12,42 @@ INTENTS = [
         'name': 'laboratoryWork',
         'tokens': ("лабораторная работа", "лаба"),
         'scenario': 'laboratoryWork',
-        'answer': None
+        'answer': None,
+        'group_handler': 'group_handler_laboratory_work'
     },
     {
         'name': 'PiggyBank',
-        'tokens': ("ссылка накопилка", "ссылки накопилки","/копилка"),
+        'tokens': ("ссылка накопилка", "ссылки накопилки", "/копилка"),
         'scenario': None,
         'answer': 'https://cloud.mail.ru/public/E1Gt/XgKpuQDRE/ - копилка стариков\n'
                   'https://disk.yandex.ru/d/VGymqWhp0uV44Q - копилка\n'
                   'https://disk.yandex.ru/d/Cp1kYo1cKhb77Q - копилка №2'
     },
     {
-        'name':'Help',
-        'tokens':('/рецензист','/рецензист'),
+        'name': 'Anecdote',
+        'tokens': ("рецензист анекдот"),
+        'scenario': None,
+        'answer': None,
+        'group_handler': 'group_handler_anecdote'
+    },
+{
+        'name': 'Anecdote',
+        'tokens': ("№"),
         'scenario':None,
-        'answer':'Руководсто по ебле рецензиста:\n'
-                 '1.Для вызова лаб достаточно ввсети №[курс][номер лабы], для бесед и оправить сообщение с текстом'
-                 '"лаба" или "лабораторная работа" для ЛС\n'
-                 '\n\nСписок команд:\n\n'
-                 '/физфак\n'
-                 'ссылка накопилка или ссылки накопилки - ссылки на копилки\n'
-                 '[club197891905|Ссылка на группу]'
+        'answer': None,
+        'group_handler': 'group_handler_laboratory_work'
+    },
+    {
+        'name': 'Help',
+        'tokens': ('/рецензист', '/рецензист'),
+        'scenario': None,
+        'answer': 'Руководсто по ебле рецензиста:\n'
+                  '1.Для вызова лаб достаточно ввсети №[курс][номер лабы], для бесед и оправить сообщение с текстом'
+                  '"лаба" или "лабораторная работа" для ЛС\n'
+                  '\n\nСписок команд:\n\n'
+                  '/физфак\n'
+                  'ссылка накопилка или ссылки накопилки - ссылки на копилки\n'
+                  '[club197891905|Ссылка на группу]'
     }
 ]
 

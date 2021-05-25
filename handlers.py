@@ -3,6 +3,7 @@
 import re
 from models import LaboratoryWork
 from pony.orm import db_session
+import random
 
 re_number = re.compile(r'№([0-9]{1,4})')
 re_class = re.compile(r'[1-4]{1}')
@@ -31,3 +32,26 @@ def handler_link(text,context):
     context['newPiggyBank'] = laba.newPiggyBank
     context['IOFPiggyBank'] = laba.IOFPiggyBank
     return text.lower() == 'да'
+
+
+
+def group_handler_laboratory_work(text):
+    find = re.findall(re_number,text)
+    numberLab = LaboratoryWork.get(id=find[0])
+    if numberLab:
+        new = numberLab.oldPiggyBank
+        old = numberLab.newPiggyBank
+        IOF = numberLab.IOFPiggyBank
+        text = f'{old} - копилка стариков\n' \
+               f'{new} - копилка\n' \
+               f'{IOF} - копилка №2'
+    return text
+
+
+def group_handler_anecdote(text):
+    with open('aneki.txt','r',encoding='utf-8') as file:
+        anek = file.read().split('/')
+        print(anek)
+        chose_anek = random.choice(anek)
+        print(chose_anek)
+    return chose_anek
