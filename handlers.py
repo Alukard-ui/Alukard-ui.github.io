@@ -51,7 +51,5 @@ def group_handler_laboratory_work(text):
 def group_handler_anecdote(text):
     with open('aneki.txt','r',encoding='utf-8') as file:
         anek = file.read().split('/')
-        print(anek)
         chose_anek = random.choice(anek)
-        print(chose_anek)
     return chose_anek
