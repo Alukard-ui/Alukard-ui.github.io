@@ -39,8 +39,8 @@ def group_handler_laboratory_work(text):
     find = re.findall(re_number,text)
     numberLab = LaboratoryWork.get(id=find[0])
     if numberLab:
-        new = numberLab.oldPiggyBank
-        old = numberLab.newPiggyBank
+        old = numberLab.oldPiggyBank
+        new = numberLab.newPiggyBank
         IOF = numberLab.IOFPiggyBank
         text = f'{old} - копилка стариков\n' \
                f'{new} - копилка\n' \
