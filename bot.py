@@ -72,7 +72,7 @@ class Bot:
                 self.api.messages.send(
                     random_id=random.randint(0, 2 ** 20),
                     peer_id=user_id,
-                    attachment='photo-197891905_457239038'
+                    attachment='photo-197891905_457239039'
                 )
 
 
