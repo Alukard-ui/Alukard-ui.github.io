@@ -67,6 +67,13 @@ class Bot:
                         text_to_send = handler(text)
                         if text_to_send:
                             self.send_message(text_to_send,user_id)
+            if text == '/Семен':
+                print('ok')
+                self.api.messages.send(
+                    random_id=random.randint(0, 2 ** 20),
+                    peer_id=user_id,
+                    attachment='photo-197891905_457239038'
+                )
 
 
 
