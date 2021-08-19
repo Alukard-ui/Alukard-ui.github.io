@@ -8,3 +8,115 @@ Traceback (most recent call last):
   File "E:\PycharmProjects\Reviewer\bot.py", line 65, in on_event
     if intent['group_handler']:
 KeyError: 'group_handler'
+[2021-06-02 22:04:41,143 bot ERROR] Ошибка обработки
+Traceback (most recent call last):
+  File "E:\PycharmProjects\Reviewer\bot.py", line 34, in run
+    self.on_event(event)
+  File "<string>", line 2, in on_event
+  File "E:\PycharmProjects\Reviewer\vk_bot\lib\site-packages\pony\orm\core.py", line 533, in new_func
+    result = func(*args, **kwargs)
+  File "E:\PycharmProjects\Reviewer\bot.py", line 77, in on_event
+    self.api.messages.send(peer_id=event.object.peer_id, random_id=0, attachment=attachment)
+  File "E:\PycharmProjects\Reviewer\vk_bot\lib\site-packages\vk_api\vk_api.py", line 681, in __call__
+    return self._vk.method(self._method, kwargs)
+  File "E:\PycharmProjects\Reviewer\vk_bot\lib\site-packages\vk_api\vk_api.py", line 646, in method
+    raise error
+vk_api.exceptions.ApiError: [100] One of the parameters specified was missing or invalid: you should specify peer_id, user_id, domain, chat_id or user_ids param
+[2021-06-02 22:06:27,451 bot ERROR] Ошибка обработки
+Traceback (most recent call last):
+  File "E:\PycharmProjects\Reviewer\bot.py", line 34, in run
+    self.on_event(event)
+  File "<string>", line 2, in on_event
+  File "E:\PycharmProjects\Reviewer\vk_bot\lib\site-packages\pony\orm\core.py", line 533, in new_func
+    result = func(*args, **kwargs)
+  File "E:\PycharmProjects\Reviewer\bot.py", line 71, in on_event
+    self.api.messages.send(
+  File "E:\PycharmProjects\Reviewer\vk_bot\lib\site-packages\vk_api\vk_api.py", line 681, in __call__
+    return self._vk.method(self._method, kwargs)
+  File "E:\PycharmProjects\Reviewer\vk_bot\lib\site-packages\vk_api\vk_api.py", line 646, in method
+    raise error
+vk_api.exceptions.ApiError: [100] One of the parameters specified was missing or invalid: message is empty or invalid
+[2021-06-02 22:06:45,744 bot ERROR] Ошибка обработки
+Traceback (most recent call last):
+  File "E:\PycharmProjects\Reviewer\bot.py", line 34, in run
+    self.on_event(event)
+  File "<string>", line 2, in on_event
+  File "E:\PycharmProjects\Reviewer\vk_bot\lib\site-packages\pony\orm\core.py", line 533, in new_func
+    result = func(*args, **kwargs)
+  File "E:\PycharmProjects\Reviewer\bot.py", line 72, in on_event
+    self.api.messages.send(
+  File "E:\PycharmProjects\Reviewer\vk_bot\lib\site-packages\vk_api\vk_api.py", line 681, in __call__
+    return self._vk.method(self._method, kwargs)
+  File "E:\PycharmProjects\Reviewer\vk_bot\lib\site-packages\vk_api\vk_api.py", line 646, in method
+    raise error
+vk_api.exceptions.ApiError: [100] One of the parameters specified was missing or invalid: message is empty or invalid
+[2021-06-02 22:08:42,700 bot ERROR] Ошибка обработки
+Traceback (most recent call last):
+  File "E:\PycharmProjects\Reviewer\bot.py", line 34, in run
+    self.on_event(event)
+  File "<string>", line 2, in on_event
+  File "E:\PycharmProjects\Reviewer\vk_bot\lib\site-packages\pony\orm\core.py", line 533, in new_func
+    result = func(*args, **kwargs)
+  File "E:\PycharmProjects\Reviewer\bot.py", line 72, in on_event
+    self.api.messages.send(
+  File "E:\PycharmProjects\Reviewer\vk_bot\lib\site-packages\vk_api\vk_api.py", line 681, in __call__
+    return self._vk.method(self._method, kwargs)
+  File "E:\PycharmProjects\Reviewer\vk_bot\lib\site-packages\vk_api\vk_api.py", line 646, in method
+    raise error
+vk_api.exceptions.ApiError: [100] One of the parameters specified was missing or invalid: message is empty or invalid
+[2021-06-02 22:09:43,023 bot ERROR] Ошибка обработки
+Traceback (most recent call last):
+  File "E:\PycharmProjects\Reviewer\bot.py", line 34, in run
+    self.on_event(event)
+  File "<string>", line 2, in on_event
+  File "E:\PycharmProjects\Reviewer\vk_bot\lib\site-packages\pony\orm\core.py", line 533, in new_func
+    result = func(*args, **kwargs)
+  File "E:\PycharmProjects\Reviewer\bot.py", line 72, in on_event
+    self.api.messages.send(
+  File "E:\PycharmProjects\Reviewer\vk_bot\lib\site-packages\vk_api\vk_api.py", line 681, in __call__
+    return self._vk.method(self._method, kwargs)
+  File "E:\PycharmProjects\Reviewer\vk_bot\lib\site-packages\vk_api\vk_api.py", line 646, in method
+    raise error
+vk_api.exceptions.ApiError: [100] One of the parameters specified was missing or invalid: message is empty or invalid
+[2021-06-02 22:11:12,485 bot ERROR] Ошибка обработки
+Traceback (most recent call last):
+  File "E:\PycharmProjects\Reviewer\bot.py", line 34, in run
+    self.on_event(event)
+  File "<string>", line 2, in on_event
+  File "E:\PycharmProjects\Reviewer\vk_bot\lib\site-packages\pony\orm\core.py", line 533, in new_func
+    result = func(*args, **kwargs)
+  File "E:\PycharmProjects\Reviewer\bot.py", line 72, in on_event
+    self.api.messages.send(
+  File "E:\PycharmProjects\Reviewer\vk_bot\lib\site-packages\vk_api\vk_api.py", line 681, in __call__
+    return self._vk.method(self._method, kwargs)
+  File "E:\PycharmProjects\Reviewer\vk_bot\lib\site-packages\vk_api\vk_api.py", line 646, in method
+    raise error
+vk_api.exceptions.ApiError: [100] One of the parameters specified was missing or invalid: message is empty or invalid
+[2021-06-02 22:13:33,724 bot ERROR] Ошибка обработки
+Traceback (most recent call last):
+  File "E:\PycharmProjects\Reviewer\bot.py", line 34, in run
+    self.on_event(event)
+  File "<string>", line 2, in on_event
+  File "E:\PycharmProjects\Reviewer\vk_bot\lib\site-packages\pony\orm\core.py", line 533, in new_func
+    result = func(*args, **kwargs)
+  File "E:\PycharmProjects\Reviewer\bot.py", line 72, in on_event
+    self.api.messages.send(
+  File "E:\PycharmProjects\Reviewer\vk_bot\lib\site-packages\vk_api\vk_api.py", line 681, in __call__
+    return self._vk.method(self._method, kwargs)
+  File "E:\PycharmProjects\Reviewer\vk_bot\lib\site-packages\vk_api\vk_api.py", line 646, in method
+    raise error
+vk_api.exceptions.ApiError: [100] One of the parameters specified was missing or invalid: message is empty or invalid
+[2021-06-02 22:14:14,791 bot ERROR] Ошибка обработки
+Traceback (most recent call last):
+  File "E:\PycharmProjects\Reviewer\bot.py", line 34, in run
+    self.on_event(event)
+  File "<string>", line 2, in on_event
+  File "E:\PycharmProjects\Reviewer\vk_bot\lib\site-packages\pony\orm\core.py", line 533, in new_func
+    result = func(*args, **kwargs)
+  File "E:\PycharmProjects\Reviewer\bot.py", line 72, in on_event
+    self.api.messages.send(
+  File "E:\PycharmProjects\Reviewer\vk_bot\lib\site-packages\vk_api\vk_api.py", line 681, in __call__
+    return self._vk.method(self._method, kwargs)
+  File "E:\PycharmProjects\Reviewer\vk_bot\lib\site-packages\vk_api\vk_api.py", line 646, in method
+    raise error
+vk_api.exceptions.ApiError: [100] One of the parameters specified was missing or invalid: message is empty or invalid
